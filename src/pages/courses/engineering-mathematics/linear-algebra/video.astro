@@ -1,0 +1,328 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Linear Algebra Video Lectures | Engineering Mathematics | ACEgate ECE"
+  description="Video lectures for Linear Algebra under Engineering Mathematics for GATE ECE preparation."
+>
+  <main class="video-page">
+    <section class="video-hero">
+      <div class="container">
+        <a
+          href="/courses/engineering-mathematics/linear-algebra"
+          class="back-link"
+        >
+          ← Back to Linear Algebra
+        </a>
+
+        <p class="eyebrow">ENGINEERING MATHEMATICS</p>
+
+        <h1>Linear Algebra<br />Video Lectures</h1>
+
+        <p class="hero-description">
+          Learn Linear Algebra concepts through structured video lectures
+          designed for GATE ECE preparation.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">VIDEO LECTURES</p>
+
+          <h2>Learn Linear Algebra</h2>
+
+          <p>
+            Topic-wise lectures covering important concepts,
+            problem-solving techniques and GATE-oriented preparation.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-number">01</div>
+
+            <h3>Matrices</h3>
+
+            <p>
+              Introduction to matrices, types of matrices, operations
+              and important properties.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+
+          <article class="video-card">
+            <div class="video-number">02</div>
+
+            <h3>Determinants</h3>
+
+            <p>
+              Understand determinants, their properties and
+              important calculation techniques.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+
+          <article class="video-card">
+            <div class="video-number">03</div>
+
+            <h3>Rank of Matrix</h3>
+
+            <p>
+              Learn rank, row reduction and important methods
+              used to determine matrix rank.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+
+          <article class="video-card">
+            <div class="video-number">04</div>
+
+            <h3>System of Linear Equations</h3>
+
+            <p>
+              Study consistency, solutions and methods for solving
+              systems of linear equations.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+
+          <article class="video-card">
+            <div class="video-number">05</div>
+
+            <h3>Eigenvalues and Eigenvectors</h3>
+
+            <p>
+              Understand eigenvalues, eigenvectors, characteristic
+              equations and GATE-focused concepts.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+
+          <article class="video-card">
+            <div class="video-number">06</div>
+
+            <h3>Diagonalization</h3>
+
+            <p>
+              Learn matrix diagonalization and its important
+              applications in Linear Algebra.
+            </p>
+
+            <span>Video Coming Soon →</span>
+          </article>
+        </div>
+
+        <div class="coming-box">
+          <strong>Video lectures are coming soon.</strong>
+
+          <p>
+            Complete topic-wise lectures will be added here
+            as they are published on the ACEgate ECE YouTube channel.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  .video-page {
+    min-height: 100vh;
+    background: #ffffff;
+  }
+
+  .container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .video-hero {
+    padding: 45px 0 90px;
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(79, 70, 229, 0.13),
+        transparent 32%
+      ),
+      linear-gradient(135deg, #eef2ff 0%, #ffffff 72%);
+    border-bottom: 1px solid #eef0f5;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 55px;
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .back-link:hover {
+    color: #3730a3;
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+    color: #4f46e5;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+
+  .video-hero h1 {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-description {
+    max-width: 760px;
+    margin: 28px 0 0;
+    color: #4b5563;
+    font-size: 1.2rem;
+    line-height: 1.75;
+  }
+
+  .content-section {
+    padding: 90px 0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 40px;
+  }
+
+  .section-label {
+    margin: 0 0 8px;
+    color: #4f46e5;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    color: #111827;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading > p:last-child {
+    margin: 16px 0 0;
+    color: #6b7280;
+    line-height: 1.7;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .video-card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(17, 24, 39, 0.04);
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .video-card:hover {
+    transform: translateY(-5px);
+    border-color: #c7d2fe;
+    box-shadow: 0 16px 30px rgba(17, 24, 39, 0.08);
+  }
+
+  .video-number {
+    margin-bottom: 18px;
+    color: #4f46e5;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .video-card h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.3rem;
+  }
+
+  .video-card p {
+    margin: 12px 0 22px;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .video-card span {
+    color: #4f46e5;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .coming-box {
+    margin-top: 35px;
+    padding: 25px;
+    border: 1px solid #c7d2fe;
+    border-radius: 16px;
+    background: #eef2ff;
+  }
+
+  .coming-box strong {
+    color: #3730a3;
+  }
+
+  .coming-box p {
+    margin: 8px 0 0;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 950px) {
+    .video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      width: min(100% - 32px, 1160px);
+    }
+
+    .video-hero {
+      padding: 35px 0 65px;
+    }
+
+    .back-link {
+      margin-bottom: 45px;
+    }
+
+    .content-section {
+      padding: 65px 0;
+    }
+
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .video-card {
+      padding: 24px;
+    }
+  }
+</style>

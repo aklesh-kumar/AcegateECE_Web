@@ -1,0 +1,299 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Vector Calculus | Engineering Mathematics | ACEgate ECE"
+  description="Learn Vector Calculus for GATE ECE with structured concepts, practice questions, PYQs and video lectures."
+>
+  <main class="topic-page">
+    <section class="topic-hero">
+      <div class="container">
+        <a
+          href="/courses/engineering-mathematics"
+          class="back-link"
+        >
+          ← Back to Engineering Mathematics
+        </a>
+
+        <p class="eyebrow">Engineering Mathematics</p>
+
+        <h1>Vector Calculus</h1>
+
+        <p class="topic-description">
+          Master vector calculus concepts with structured theory,
+          GATE-focused problem solving and exam-oriented practice.
+        </p>
+      </div>
+    </section>
+
+    <section class="learning-section">
+      <div class="container">
+        <h2>Learning Material</h2>
+
+        <div class="material-grid">
+          <a href="#" class="material-card">
+            <span class="material-icon">📘</span>
+            <h3>Notes</h3>
+            <p>Complete conceptual notes and important formulas.</p>
+            <span class="status">Coming Soon</span>
+          </a>
+
+          <a href="#" class="material-card">
+            <span class="material-icon">📝</span>
+            <h3>GATE PYQs</h3>
+            <p>Previous year GATE questions with solutions.</p>
+            <span class="status">Coming Soon</span>
+          </a>
+
+          <a href="#" class="material-card">
+            <span class="material-icon">🎯</span>
+            <h3>Practice</h3>
+            <p>Topic-wise questions for concept strengthening.</p>
+            <span class="status">Coming Soon</span>
+          </a>
+
+          <a href="#" class="material-card">
+            <span class="material-icon">🎥</span>
+            <h3>Video Lectures</h3>
+            <p>Detailed lectures and problem-solving sessions.</p>
+            <span class="status">Coming Soon</span>
+          </a>
+
+          <a href="#" class="material-card">
+            <span class="material-icon">🔗</span>
+            <h3>Resources</h3>
+            <p>Useful references and additional learning material.</p>
+            <span class="status">Coming Soon</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="topics-section">
+      <div class="container">
+        <h2>Topics Covered</h2>
+
+        <div class="topics-grid">
+          <article class="topic-card">
+            <div class="topic-number">01</div>
+            <h3>Vector Algebra</h3>
+            <p>Vectors, scalar products, vector products and their properties.</p>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-number">02</div>
+            <h3>Gradient</h3>
+            <p>Gradient of scalar fields and directional derivatives.</p>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-number">03</div>
+            <h3>Divergence</h3>
+            <p>Divergence of vector fields and physical interpretation.</p>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-number">04</div>
+            <h3>Curl</h3>
+            <p>Curl of vector fields and important properties.</p>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-number">05</div>
+            <h3>Line and Surface Integrals</h3>
+            <p>Line integrals, surface integrals and their applications.</p>
+          </article>
+
+          <article class="topic-card">
+            <div class="topic-number">06</div>
+            <h3>Green's, Gauss' and Stokes' Theorems</h3>
+            <p>Important vector integral theorems for GATE problem solving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .topic-page {
+    min-height: 100vh;
+    background: #f8fafc;
+  }
+
+  .topic-hero {
+    padding: 70px 20px 55px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+  }
+
+  .container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #bfdbfe;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover {
+    color: white;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    color: #93c5fd;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+
+  .topic-description {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: #dbeafe;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .learning-section,
+  .topics-section {
+    padding: 60px 20px;
+  }
+
+  .topics-section {
+    padding-top: 0;
+  }
+
+  h2 {
+    margin: 0 0 28px;
+    color: #0f172a;
+    font-size: 2rem;
+  }
+
+  .material-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  .material-card {
+    padding: 24px 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .material-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+  }
+
+  .material-icon {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 1.8rem;
+  }
+
+  .material-card h3 {
+    margin: 0 0 8px;
+    color: #0f172a;
+  }
+
+  .material-card p {
+    margin: 0 0 16px;
+    color: #64748b;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .topic-card {
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .topic-number {
+    margin-bottom: 14px;
+    color: #2563eb;
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  .topic-card h3 {
+    margin: 0 0 8px;
+    color: #0f172a;
+  }
+
+  .topic-card p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .material-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .topic-hero {
+      padding: 50px 18px 40px;
+    }
+
+    .learning-section,
+    .topics-section {
+      padding: 45px 18px;
+    }
+
+    .material-grid,
+    .topics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+</style>

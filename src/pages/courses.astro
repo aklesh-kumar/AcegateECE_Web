@@ -1,0 +1,665 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const courses = [
+  {
+    icon: "📐",
+    title: "Engineering Mathematics",
+    slug: "engineering-mathematics",
+    description:
+      "Build a strong foundation in mathematics required for GATE ECE.",
+    topics: "Linear Algebra • Calculus • Probability • Vector Calculus",
+  },
+  {
+    icon: "⚡",
+    title: "Network Theory",
+    slug: "network-theory",
+    description:
+      "Master electrical networks, circuit analysis and important GATE concepts.",
+    topics: "KCL/KVL • Network Theorems • AC Analysis • Two-Port Networks",
+  },
+  {
+    icon: "〰️",
+    title: "Signals & Systems",
+    slug: "signals-systems",
+    description:
+      "Understand signals, systems and transforms with a GATE-focused approach.",
+    topics: "LTI Systems • Fourier • Laplace • Z-Transform",
+  },
+  {
+    icon: "🔬",
+    title: "Electronic Devices",
+    slug: "electronic-devices",
+    description:
+      "Learn semiconductor devices and their characteristics from fundamentals.",
+    topics: "Diodes • BJT • MOSFET • MOSCAP",
+  },
+  {
+    icon: "📊",
+    title: "Analog Electronics",
+    slug: "analog-electronics",
+    description:
+      "Develop a clear understanding of analog circuits and amplifiers.",
+    topics: "Amplifiers • Op-Amps • Feedback • Oscillators",
+  },
+  {
+    icon: "💻",
+    title: "Digital Electronics",
+    slug: "digital-electronics",
+    description:
+      "Learn digital concepts systematically for GATE and ECE fundamentals.",
+    topics: "Boolean Algebra • Combinational • Sequential • Memories",
+  },
+  {
+    icon: "🎛️",
+    title: "Control Systems",
+    slug: "control-systems",
+    description:
+      "Understand system modelling, stability and frequency-domain analysis.",
+    topics: "Block Diagrams • Stability • Root Locus • Bode Plot",
+  },
+  {
+    icon: "📡",
+    title: "Communications",
+    slug: "communications",
+    description:
+      "Master analog and digital communication concepts for GATE ECE.",
+    topics: "AM/FM • Sampling • Digital Modulation • Information Theory",
+  },
+  {
+    icon: "🌐",
+    title: "Electromagnetics",
+    slug: "electromagnetics",
+    description:
+      "Build strong fundamentals in electromagnetic fields and wave propagation.",
+    topics: "Maxwell Equations • Waves • Transmission Lines • Waveguides",
+  },
+  {
+    icon: "🧠",
+    title: "General Aptitude",
+    slug: "general-aptitude",
+    description:
+      "Improve accuracy and speed in the General Aptitude section of GATE.",
+    topics: "Verbal Ability • Quantitative Aptitude • Reasoning",
+  },
+];
+---
+
+<Layout>
+  <main class="courses-page">
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
+    <section class="courses-hero">
+      <div class="container">
+
+        <p class="eyebrow">
+          ACEgate ECE
+        </p>
+
+        <h1>
+          ECE Courses
+        </h1>
+
+        <p class="hero-description">
+          Structured courses designed to help you understand concepts,
+          practice consistently and prepare effectively for GATE ECE.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         COURSE SECTION
+         ========================= -->
+
+    <section class="courses-section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="section-label">
+              LEARN SYSTEMATICALLY
+            </p>
+
+            <h2>
+              Explore ECE Subjects
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Choose a subject and build your preparation step by step.
+          </p>
+
+        </div>
+
+
+        <!-- COURSE GRID -->
+
+        <div class="course-grid">
+
+          {
+            courses.map((course) => (
+              <article class="course-card">
+
+                <div
+                  class="course-icon"
+                  aria-hidden="true"
+                >
+                  {course.icon}
+                </div>
+
+
+                <h3>
+                  {course.title}
+                </h3>
+
+
+                <p class="course-description">
+                  {course.description}
+                </p>
+
+
+                <p class="course-topics">
+                  {course.topics}
+                </p>
+
+
+                <a
+                  href={`/courses/${course.slug}`}
+                  class="course-link"
+                >
+                  Explore Course
+                  <span aria-hidden="true">
+                    →
+                  </span>
+                </a>
+
+              </article>
+            ))
+          }
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CTA SECTION
+         ========================= -->
+
+    <section class="cta-section">
+      <div class="container">
+
+        <div class="cta-card">
+
+          <div>
+
+            <p class="section-label">
+              KEEP PRACTICING
+            </p>
+
+            <h2>
+              Learn the concept. Solve the PYQ. Build confidence.
+            </h2>
+
+            <p>
+              Combine structured learning with previous year questions
+              and focused practice.
+            </p>
+
+          </div>
+
+
+          <a
+            href="/pyqs"
+            class="cta-button"
+          >
+            Practice PYQs →
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+
+<style>
+
+  /* =========================
+     GLOBAL
+     ========================= */
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+
+  .courses-page {
+    background: #ffffff;
+  }
+
+
+  .container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .courses-hero {
+    padding: 90px 0 80px;
+
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(79, 70, 229, 0.12),
+        transparent 32%
+      ),
+      linear-gradient(
+        135deg,
+        #eef2ff 0%,
+        #ffffff 72%
+      );
+
+    border-bottom: 1px solid #eef0f5;
+  }
+
+
+  .eyebrow {
+    margin: 0 0 14px;
+
+    color: #4f46e5;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .courses-hero h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+  }
+
+
+  .hero-description {
+    max-width: 720px;
+
+    margin: 26px 0 0;
+
+    color: #4b5563;
+
+    font-size: 1.15rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* =========================
+     COURSES
+     ========================= */
+
+  .courses-section {
+    padding: 90px 0;
+  }
+
+
+  .section-heading {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 38px;
+  }
+
+
+  .section-label {
+    margin: 0 0 8px;
+
+    color: #4f46e5;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .section-heading h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+  }
+
+
+  .section-description {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+  }
+
+
+  /* =========================
+     COURSE GRID
+     ========================= */
+
+  .course-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+  }
+
+
+  .course-card {
+    display: flex;
+
+    min-height: 350px;
+
+    padding: 28px;
+
+    flex-direction: column;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 4px 18px rgba(17, 24, 39, 0.04);
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+
+  .course-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+      0 18px 35px rgba(17, 24, 39, 0.09);
+  }
+
+
+  .course-icon {
+    display: flex;
+
+    width: 54px;
+    height: 54px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+
+    font-size: 1.6rem;
+  }
+
+
+  .course-card h3 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+  }
+
+
+  .course-description {
+    margin: 14px 0 18px;
+
+    color: #6b7280;
+
+    line-height: 1.65;
+  }
+
+
+  .course-topics {
+    margin: 0;
+
+    color: #4b5563;
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+
+  .course-link {
+    margin-top: auto;
+
+    padding-top: 24px;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition:
+      color 0.2s ease;
+  }
+
+
+  .course-link:hover {
+    color: #3730a3;
+  }
+
+
+  /* =========================
+     CTA
+     ========================= */
+
+  .cta-section {
+    padding: 0 0 90px;
+  }
+
+
+  .cta-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 44px;
+
+    border-radius: 24px;
+
+    background: #111827;
+
+    color: #ffffff;
+  }
+
+
+  .cta-card h2 {
+    max-width: 680px;
+
+    margin: 0;
+
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  .cta-card p:not(.section-label) {
+    max-width: 650px;
+
+    margin: 16px 0 0;
+
+    color: #9ca3af;
+
+    line-height: 1.7;
+  }
+
+
+  .cta-card .section-label {
+    color: #a5b4fc;
+  }
+
+
+  .cta-button {
+    flex-shrink: 0;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+
+  .cta-button:hover {
+    background: #4338ca;
+
+    transform: translateY(-2px);
+  }
+
+
+  /* =========================
+     TABLET
+     ========================= */
+
+  @media (max-width: 950px) {
+
+    .course-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .section-heading {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 14px;
+    }
+
+
+    .cta-card {
+      align-items: flex-start;
+
+      flex-direction: column;
+    }
+
+  }
+
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media (max-width: 600px) {
+
+    .container {
+      width: min(100% - 32px, 1160px);
+    }
+
+
+    .courses-hero {
+      padding: 65px 0 60px;
+    }
+
+
+    .courses-section {
+      padding: 65px 0;
+    }
+
+
+    .course-grid {
+      grid-template-columns: 1fr;
+
+      gap: 16px;
+    }
+
+
+    .course-card {
+      min-height: 320px;
+
+      padding: 24px;
+    }
+
+
+    .cta-section {
+      padding-bottom: 65px;
+    }
+
+
+    .cta-card {
+      padding: 30px 24px;
+
+      border-radius: 18px;
+    }
+
+
+    .cta-button {
+      width: 100%;
+
+      text-align: center;
+    }
+
+  }
+
+</style>

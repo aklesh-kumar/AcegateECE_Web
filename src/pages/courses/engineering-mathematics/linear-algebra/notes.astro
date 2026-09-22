@@ -1,0 +1,395 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Linear Algebra Notes | Engineering Mathematics | ACEgate ECE"
+  description="Complete Linear Algebra notes for GATE ECE preparation by ACEgate ECE."
+>
+  <main class="notes-page">
+    <section class="notes-hero">
+      <div class="container">
+        <a
+          href="/courses/engineering-mathematics/linear-algebra"
+          class="back-link"
+        >
+          ← Back to Linear Algebra
+        </a>
+
+        <p class="eyebrow">Engineering Mathematics</p>
+
+        <h1>Linear Algebra Notes</h1>
+
+        <p class="notes-description">
+          Structured Linear Algebra notes for GATE ECE preparation,
+          covering important concepts, formulas and exam-oriented topics.
+        </p>
+      </div>
+    </section>
+
+    <section class="notes-content">
+      <div class="container">
+        <div class="content-layout">
+          <aside class="sidebar">
+            <h2>Contents</h2>
+
+            <nav>
+              <a href="#matrices">Matrices</a>
+              <a href="#determinants">Determinants</a>
+              <a href="#rank">Rank of Matrix</a>
+              <a href="#linear-equations">
+                System of Linear Equations
+              </a>
+              <a href="#eigenvalues">
+                Eigenvalues & Eigenvectors
+              </a>
+              <a href="#diagonalization">Diagonalization</a>
+            </nav>
+          </aside>
+
+          <article class="notes-article">
+            <section id="matrices" class="notes-section">
+              <span class="section-number">01</span>
+              <h2>Matrices</h2>
+
+              <p>
+                A matrix is a rectangular arrangement of numbers or
+                mathematical quantities organized into rows and columns.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Order of a matrix</li>
+                <li>Row and column matrices</li>
+                <li>Square matrices</li>
+                <li>Diagonal and identity matrices</li>
+                <li>Symmetric and skew-symmetric matrices</li>
+                <li>Matrix addition and multiplication</li>
+                <li>Transpose of a matrix</li>
+              </ul>
+            </section>
+
+            <section id="determinants" class="notes-section">
+              <span class="section-number">02</span>
+              <h2>Determinants</h2>
+
+              <p>
+                Determinants are scalar quantities associated with square
+                matrices and are important in solving systems of equations
+                and studying matrix properties.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Determinant of a matrix</li>
+                <li>Properties of determinants</li>
+                <li>Minors and cofactors</li>
+                <li>Expansion of determinants</li>
+                <li>Singular and non-singular matrices</li>
+              </ul>
+            </section>
+
+            <section id="rank" class="notes-section">
+              <span class="section-number">03</span>
+              <h2>Rank of Matrix</h2>
+
+              <p>
+                The rank of a matrix represents the maximum number of
+                linearly independent rows or columns.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Rank using row reduction</li>
+                <li>Elementary row operations</li>
+                <li>Row echelon form</li>
+                <li>Rank and linear independence</li>
+                <li>Rank of a system of equations</li>
+              </ul>
+            </section>
+
+            <section id="linear-equations" class="notes-section">
+              <span class="section-number">04</span>
+              <h2>System of Linear Equations</h2>
+
+              <p>
+                Systems of linear equations can be represented using
+                matrices and solved using systematic algebraic methods.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Homogeneous equations</li>
+                <li>Non-homogeneous equations</li>
+                <li>Consistency of equations</li>
+                <li>Unique solution</li>
+                <li>Infinite solutions</li>
+                <li>No solution</li>
+              </ul>
+            </section>
+
+            <section id="eigenvalues" class="notes-section">
+              <span class="section-number">05</span>
+              <h2>Eigenvalues and Eigenvectors</h2>
+
+              <p>
+                Eigenvalues and eigenvectors describe important properties
+                of a square matrix and are frequently used in engineering
+                mathematics.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Characteristic equation</li>
+                <li>Eigenvalues</li>
+                <li>Eigenvectors</li>
+                <li>Properties of eigenvalues</li>
+                <li>Algebraic and geometric multiplicity</li>
+              </ul>
+            </section>
+
+            <section id="diagonalization" class="notes-section">
+              <span class="section-number">06</span>
+              <h2>Diagonalization</h2>
+
+              <p>
+                Diagonalization transforms a suitable square matrix into
+                a diagonal matrix using its eigenvalues and eigenvectors.
+              </p>
+
+              <h3>Important Concepts</h3>
+
+              <ul>
+                <li>Diagonal matrix</li>
+                <li>Similar matrices</li>
+                <li>Diagonalization condition</li>
+                <li>Eigenvector matrix</li>
+                <li>Applications of diagonalization</li>
+              </ul>
+            </section>
+
+            <div class="coming-box">
+              <strong>More GATE-focused content coming soon.</strong>
+              <p>
+                Detailed formulas, solved examples, shortcuts and
+                previous-year questions will be added here.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .notes-page {
+    min-height: 100vh;
+    background: #f8fafc;
+  }
+
+  .notes-hero {
+    padding: 70px 20px 55px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+  }
+
+  .container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #bfdbfe;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover {
+    color: white;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    color: #93c5fd;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+
+  .notes-description {
+    max-width: 760px;
+    margin: 20px 0 0;
+    color: #dbeafe;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .notes-content {
+    padding: 60px 20px;
+  }
+
+  .content-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .sidebar h2 {
+    margin: 0 0 18px;
+    color: #0f172a;
+    font-size: 1.2rem;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sidebar nav a {
+    padding: 9px 10px;
+    border-radius: 8px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .sidebar nav a:hover {
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .notes-article {
+    min-width: 0;
+    padding: 35px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .notes-section {
+    scroll-margin-top: 100px;
+    padding: 10px 0 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .section-number {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: 800;
+  }
+
+  .notes-section h2 {
+    margin: 0 0 14px;
+    color: #0f172a;
+    font-size: 1.8rem;
+  }
+
+  .notes-section h3 {
+    margin: 25px 0 12px;
+    color: #1e293b;
+    font-size: 1.15rem;
+  }
+
+  .notes-section p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.8;
+  }
+
+  .notes-section ul {
+    margin: 0;
+    padding-left: 22px;
+    color: #475569;
+    line-height: 1.9;
+  }
+
+  .coming-box {
+    padding: 22px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+  }
+
+  .coming-box strong {
+    color: #1e3a8a;
+  }
+
+  .coming-box p {
+    margin: 8px 0 0;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    .content-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      position: static;
+    }
+
+    .sidebar nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .notes-article {
+      padding: 25px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .notes-hero {
+      padding: 50px 18px 40px;
+    }
+
+    .notes-content {
+      padding: 45px 18px;
+    }
+
+    .sidebar nav {
+      grid-template-columns: 1fr;
+    }
+
+    .notes-article {
+      padding: 20px;
+    }
+
+    .notes-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,561 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Linear Algebra | Engineering Mathematics | ACEgate ECE"
+  description="Learn Linear Algebra for GATE ECE with structured concepts, notes, PYQs and practice."
+>
+  <main class="topic-page">
+
+    <section class="topic-hero">
+      <div class="container">
+
+        <a href="/courses/engineering-mathematics" class="back-link">
+          ← Back to Engineering Mathematics
+        </a>
+
+        <p class="eyebrow">
+          ENGINEERING MATHEMATICS
+        </p>
+
+        <h1>
+          Linear Algebra
+        </h1>
+
+        <p class="hero-description">
+          Build a strong foundation in matrices, determinants,
+          eigenvalues, eigenvectors and other important Linear Algebra
+          concepts required for GATE ECE.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section class="content-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">
+            LEARNING MATERIAL
+          </p>
+
+          <h2>
+            Linear Algebra Resources
+          </h2>
+
+          <p>
+            Select a section below to continue your preparation.
+          </p>
+        </div>
+
+
+        <div class="resource-grid">
+
+          <!-- NOTES: NOW AVAILABLE -->
+          <a
+            href="/courses/engineering-mathematics/linear-algebra/notes"
+            class="resource-card"
+          >
+            <div class="resource-icon">
+              📘
+            </div>
+
+            <h3>
+              Notes
+            </h3>
+
+            <p>
+              Topic-wise concepts, formulas and explanations.
+            </p>
+
+            <span>
+              Available →
+            </span>
+          </a>
+
+
+          <!-- GATE PYQs -->
+          <a
+  href="/courses/engineering-mathematics/linear-algebra/pyqs"
+  class="resource-card"
+>
+  <div class="resource-icon">
+    📝
+  </div>
+
+  <h3>
+    GATE PYQs
+  </h3>
+
+  <p>
+    Previous year GATE questions with solutions.
+  </p>
+
+  <span>
+    Available →
+  </span>
+</a>
+
+
+          <!-- PRACTICE -->
+          <a
+  href="/courses/engineering-mathematics/linear-algebra/practice"
+  class="resource-card"
+>
+  <div class="resource-icon">
+    🧠
+  </div>
+
+  <h3>
+    Practice
+  </h3>
+
+  <p>
+    Practice questions to test your understanding.
+  </p>
+
+  <span>
+    Available →
+  </span>
+</a>
+
+
+          <!-- VIDEO LECTURES -->
+          <a
+  href="/courses/engineering-mathematics/linear-algebra/video"
+  class="resource-card"
+>
+  <div class="resource-icon">
+    ▶️
+  </div>
+
+  <h3>
+    Video Lectures
+  </h3>
+
+  <p>
+    Watch structured video lectures for Linear Algebra.
+  </p>
+
+  <span>
+    Available →
+  </span>
+</a>
+
+
+          <!-- RESOURCES -->
+          <a
+  href="/courses/engineering-mathematics/linear-algebra/resources"
+  class="resource-card"
+>
+  <div class="resource-icon">
+    📚
+  </div>
+
+  <h3>
+    Resources
+  </h3>
+
+  <p>
+    Useful resources and study material for Linear Algebra.
+  </p>
+
+  <span>
+    Available →
+  </span>
+</a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="topics-section">
+      <div class="container">
+
+        <div class="topics-card">
+
+          <p class="section-label">
+            LINEAR ALGEBRA
+          </p>
+
+          <h2>
+            Topics Covered
+          </h2>
+
+          <div class="topic-list">
+
+            <div class="topic-item">
+              <span>01</span>
+              <p>Matrices</p>
+            </div>
+
+            <div class="topic-item">
+              <span>02</span>
+              <p>Determinants</p>
+            </div>
+
+            <div class="topic-item">
+              <span>03</span>
+              <p>Rank of Matrix</p>
+            </div>
+
+            <div class="topic-item">
+              <span>04</span>
+              <p>System of Linear Equations</p>
+            </div>
+
+            <div class="topic-item">
+              <span>05</span>
+              <p>Eigenvalues and Eigenvectors</p>
+            </div>
+
+            <div class="topic-item">
+              <span>06</span>
+              <p>Diagonalization</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  .topic-page {
+    background: #ffffff;
+  }
+
+  .container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  /* HERO */
+
+  .topic-hero {
+    padding: 45px 0 90px;
+
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(79, 70, 229, 0.13),
+        transparent 32%
+      ),
+      linear-gradient(
+        135deg,
+        #eef2ff 0%,
+        #ffffff 72%
+      );
+
+    border-bottom: 1px solid #eef0f5;
+  }
+
+  .back-link {
+    display: inline-block;
+
+    margin-bottom: 55px;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 700;
+  }
+
+  .back-link:hover {
+    color: #3730a3;
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+
+    color: #4f46e5;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+  .topic-hero h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+  }
+
+  .hero-description {
+    max-width: 760px;
+
+    margin: 28px 0 0;
+
+    color: #4b5563;
+
+    font-size: 1.2rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* CONTENT */
+
+  .content-section {
+    padding: 90px 0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+
+    margin-bottom: 40px;
+  }
+
+  .section-label {
+    margin: 0 0 8px;
+
+    color: #4f46e5;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+  }
+
+  .section-heading > p:last-child {
+    margin: 16px 0 0;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+  }
+
+
+  /* RESOURCE CARDS */
+
+  .resource-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+  .resource-card {
+    display: block;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    box-shadow:
+      0 4px 18px rgba(17, 24, 39, 0.04);
+
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+      0 16px 30px rgba(17, 24, 39, 0.08);
+  }
+
+  .resource-icon {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+  }
+
+  .resource-card h3 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 1.3rem;
+  }
+
+  .resource-card p {
+    margin: 12px 0 22px;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+  }
+
+  .resource-card span {
+    color: #4f46e5;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+  }
+
+
+  /* TOPICS */
+
+  .topics-section {
+    padding: 0 0 90px;
+  }
+
+  .topics-card {
+    padding: 48px;
+
+    border-radius: 24px;
+
+    background: #111827;
+
+    color: #ffffff;
+  }
+
+  .topics-card .section-label {
+    color: #a5b4fc;
+  }
+
+  .topics-card h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+  }
+
+  .topic-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .topic-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    border: 1px solid #374151;
+
+    border-radius: 12px;
+
+    background: #1f2937;
+  }
+
+  .topic-item span {
+    color: #a5b4fc;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+  }
+
+  .topic-item p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-weight: 700;
+  }
+
+
+  /* TABLET */
+
+  @media (max-width: 950px) {
+
+    .resource-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 600px) {
+
+    .container {
+      width: min(100% - 32px, 1160px);
+    }
+
+    .topic-hero {
+      padding: 35px 0 65px;
+    }
+
+    .back-link {
+      margin-bottom: 45px;
+    }
+
+    .content-section {
+      padding: 65px 0;
+    }
+
+    .resource-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+      padding: 24px;
+    }
+
+    .topics-section {
+      padding-bottom: 65px;
+    }
+
+    .topics-card {
+      padding: 30px 24px;
+
+      border-radius: 18px;
+    }
+
+    .topic-list {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>

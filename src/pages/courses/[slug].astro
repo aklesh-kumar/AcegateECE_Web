@@ -1,0 +1,828 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const courseData = {
+  "engineering-mathematics": {
+    title: "Engineering Mathematics",
+    description:
+      "Build a strong mathematical foundation for GATE ECE with structured concepts, formulas, examples and practice.",
+    topics: [
+      "Linear Algebra",
+      "Calculus",
+      "Differential Equations",
+      "Probability",
+      "Vector Calculus",
+      "Complex Variables",
+    ],
+  },
+
+  "network-theory": {
+    title: "Network Theory",
+    description:
+      "Master electrical network analysis and the important concepts required for GATE ECE.",
+    topics: [
+      "KCL & KVL",
+      "Network Theorems",
+      "AC Analysis",
+      "Transient Analysis",
+      "Two-Port Networks",
+      "Resonance",
+    ],
+  },
+
+  "signals-systems": {
+    title: "Signals & Systems",
+    description:
+      "Understand signals, systems and transforms through a structured GATE-focused approach.",
+    topics: [
+      "Continuous-Time Signals",
+      "Discrete-Time Signals",
+      "LTI Systems",
+      "Fourier Transform",
+      "Laplace Transform",
+      "Z-Transform",
+    ],
+  },
+
+  "electronic-devices": {
+    title: "Electronic Devices",
+    description:
+      "Learn semiconductor devices and their characteristics from fundamentals to GATE-level concepts.",
+    topics: [
+      "Semiconductor Physics",
+      "Diodes",
+      "BJT",
+      "MOSFET",
+      "MOS Capacitor",
+      "Device Applications",
+    ],
+  },
+
+  "analog-electronics": {
+    title: "Analog Electronics",
+    description:
+      "Develop a clear understanding of analog circuits, amplifiers and important GATE concepts.",
+    topics: [
+      "Diode Circuits",
+      "BJT Amplifiers",
+      "MOSFET Amplifiers",
+      "Op-Amps",
+      "Feedback",
+      "Oscillators",
+    ],
+  },
+
+  "digital-electronics": {
+    title: "Digital Electronics",
+    description:
+      "Learn digital electronics systematically for GATE ECE and strong engineering fundamentals.",
+    topics: [
+      "Boolean Algebra",
+      "Combinational Circuits",
+      "Sequential Circuits",
+      "Number Systems",
+      "Memories",
+      "Digital Logic",
+    ],
+  },
+
+  "control-systems": {
+    title: "Control Systems",
+    description:
+      "Understand system modelling, stability and frequency-domain analysis for GATE ECE.",
+    topics: [
+      "Block Diagrams",
+      "Signal Flow Graphs",
+      "Stability",
+      "Root Locus",
+      "Bode Plot",
+      "Nyquist Plot",
+    ],
+  },
+
+  "communications": {
+    title: "Communications",
+    description:
+      "Master analog and digital communication concepts with a focused approach for GATE ECE.",
+    topics: [
+      "AM & FM",
+      "Sampling",
+      "Pulse Modulation",
+      "Digital Modulation",
+      "Noise",
+      "Information Theory",
+    ],
+  },
+
+  "electromagnetics": {
+    title: "Electromagnetics",
+    description:
+      "Build strong fundamentals in electromagnetic fields, waves and transmission systems.",
+    topics: [
+      "Maxwell Equations",
+      "Electromagnetic Waves",
+      "Transmission Lines",
+      "Waveguides",
+      "Reflection",
+      "Radiation",
+    ],
+  },
+
+  "general-aptitude": {
+    title: "General Aptitude",
+    description:
+      "Improve accuracy, speed and problem-solving ability for the General Aptitude section of GATE.",
+    topics: [
+      "Verbal Ability",
+      "Quantitative Aptitude",
+      "Logical Reasoning",
+      "Data Interpretation",
+      "Numerical Ability",
+      "Practice Questions",
+    ],
+  },
+};
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: "engineering-mathematics" },
+    },
+    {
+      params: { slug: "network-theory" },
+    },
+    {
+      params: { slug: "signals-systems" },
+    },
+    {
+      params: { slug: "electronic-devices" },
+    },
+    {
+      params: { slug: "analog-electronics" },
+    },
+    {
+      params: { slug: "digital-electronics" },
+    },
+    {
+      params: { slug: "control-systems" },
+    },
+    {
+      params: { slug: "communications" },
+    },
+    {
+      params: { slug: "electromagnetics" },
+    },
+    {
+      params: { slug: "general-aptitude" },
+    },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const course =
+  slug && slug in courseData
+    ? courseData[slug as keyof typeof courseData]
+    : null;
+---
+
+<Layout>
+  <main class="course-page">
+    {course ? (
+      <>
+        <section class="course-hero">
+          <div class="container">
+            <a href="/courses" class="back-link">
+              ← Back to Courses
+            </a>
+
+            <p class="eyebrow">
+              ACEgate ECE
+            </p>
+
+            <h1>
+              {course.title}
+            </h1>
+
+            <p class="hero-description">
+              {course.description}
+            </p>
+          </div>
+        </section>
+
+        <section class="topics-section">
+          <div class="container">
+            <div class="section-heading">
+              <div>
+                <p class="section-label">
+                  COURSE ROADMAP
+                </p>
+
+                <h2>
+                  Topics You Will Learn
+                </h2>
+              </div>
+
+              <p class="section-description">
+                Follow the topics systematically and strengthen your
+                GATE ECE preparation step by step.
+              </p>
+            </div>
+
+
+
+
+
+
+
+<div class="topics-grid">
+  {
+    course.topics.map((topic, index) =>
+      topic === "Linear Algebra" ? (
+        <a
+          href="/courses/engineering-mathematics/linear-algebra"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : topic === "Calculus" ? (
+        <a
+          href="/courses/engineering-mathematics/calculus"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : topic === "Differential Equations" ? (
+        <a
+          href="/courses/engineering-mathematics/differential-equations"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : topic === "Probability" ? (
+        <a
+          href="/courses/engineering-mathematics/probability"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : topic === "Vector Calculus" ? (
+        <a
+          href="/courses/engineering-mathematics/vector-calculus"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : topic === "Complex Variables" ? (
+        <a
+          href="/courses/engineering-mathematics/complex-variables"
+          class="topic-card topic-link"
+        >
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </a>
+      ) : (
+        <article class="topic-card">
+          <div class="topic-number">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+          <h3>{topic}</h3>
+          <p>
+            Structured concepts, examples and
+            GATE-focused practice.
+          </p>
+        </article>
+      )
+    )
+  }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </section>
+
+        <section class="learning-section">
+          <div class="container">
+            <div class="learning-card">
+              <p class="section-label">
+                COMING NEXT
+              </p>
+
+              <h2>
+                Notes, PYQs and Practice
+              </h2>
+
+              <p>
+                This course page will later contain topic-wise notes,
+                previous year questions, practice questions, formulas
+                and learning resources.
+              </p>
+
+              <div class="learning-links">
+                <a href="/notes">
+                  Explore Notes →
+                </a>
+
+                <a href="/pyqs">
+                  Practice PYQs →
+                </a>
+
+                <a href="/practice">
+                  Start Practice →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="not-found">
+        <div class="container">
+          <p class="section-label">
+            COURSE NOT FOUND
+          </p>
+
+          <h1>
+            This course does not exist.
+          </h1>
+
+          <p>
+            Please return to the courses page and select
+            a valid subject.
+          </p>
+
+          <a href="/courses" class="back-button">
+            ← View All Courses
+          </a>
+        </div>
+      </section>
+    )}
+  </main>
+</Layout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  .course-page {
+    background: #ffffff;
+  }
+
+  .container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .course-hero {
+    padding: 45px 0 90px;
+
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(79, 70, 229, 0.13),
+        transparent 32%
+      ),
+      linear-gradient(
+        135deg,
+        #eef2ff 0%,
+        #ffffff 72%
+      );
+
+    border-bottom: 1px solid #eef0f5;
+  }
+
+  .back-link {
+    display: inline-block;
+
+    margin-bottom: 55px;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-weight: 700;
+  }
+
+  .back-link:hover {
+    color: #3730a3;
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+
+    color: #4f46e5;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+  .course-hero h1 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+  }
+
+  .hero-description {
+    max-width: 760px;
+
+    margin: 28px 0 0;
+
+    color: #4b5563;
+
+    font-size: 1.2rem;
+
+    line-height: 1.75;
+  }
+
+  /* =========================
+     TOPICS
+     ========================= */
+
+  .topics-section {
+    padding: 90px 0;
+  }
+
+  .section-heading {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 40px;
+  }
+
+  .section-label {
+    margin: 0 0 8px;
+
+    color: #4f46e5;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+  }
+
+  .section-description {
+    max-width: 440px;
+
+    margin: 0;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+  }
+
+  .topics-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+  .topic-card {
+    padding: 28px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    box-shadow:
+      0 4px 18px rgba(17, 24, 39, 0.04);
+
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+      0 16px 30px rgba(17, 24, 39, 0.08);
+  }
+
+  .topic-number {
+    margin-bottom: 22px;
+
+    color: #4f46e5;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+  }
+
+  .topic-card h3 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 1.25rem;
+  }
+
+  .topic-card p {
+    margin: 12px 0 0;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+  }
+
+  /* =========================
+     LEARNING
+     ========================= */
+
+  .learning-section {
+    padding: 0 0 90px;
+  }
+
+  .learning-card {
+    padding: 48px;
+
+    border-radius: 24px;
+
+    background: #111827;
+
+    color: #ffffff;
+  }
+
+  .learning-card .section-label {
+    color: #a5b4fc;
+  }
+
+  .learning-card h2 {
+    margin: 0;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+  }
+
+  .learning-card > p:not(.section-label) {
+    max-width: 720px;
+
+    margin: 18px 0 0;
+
+    color: #9ca3af;
+
+    line-height: 1.7;
+  }
+
+  .learning-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 30px;
+  }
+
+  .learning-links a {
+    padding: 12px 18px;
+
+    border: 1px solid #374151;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .learning-links a:hover {
+    background: #1f2937;
+
+    border-color: #6366f1;
+  }
+
+  /* =========================
+     NOT FOUND
+     ========================= */
+
+  .not-found {
+    padding: 120px 0;
+  }
+
+  .not-found h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.05em;
+  }
+
+  .not-found p:not(.section-label) {
+    max-width: 600px;
+
+    margin: 20px 0 30px;
+
+    color: #6b7280;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+  }
+
+  .back-button {
+    display: inline-block;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 800;
+  }
+
+  .back-button:hover {
+    background: #4338ca;
+  }
+
+  /* =========================
+     TABLET
+     ========================= */
+
+  @media (max-width: 950px) {
+    .topics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 14px;
+    }
+  }
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media (max-width: 600px) {
+    .container {
+      width: min(100% - 32px, 1160px);
+    }
+
+    .course-hero {
+      padding: 35px 0 65px;
+    }
+
+    .back-link {
+      margin-bottom: 45px;
+    }
+
+    .topics-section {
+      padding: 65px 0;
+    }
+
+    .topics-grid {
+      grid-template-columns: 1fr;
+
+      gap: 16px;
+    }
+
+    .topic-card {
+      padding: 24px;
+    }
+
+    .learning-section {
+      padding-bottom: 65px;
+    }
+
+    .learning-card {
+      padding: 30px 24px;
+
+      border-radius: 18px;
+    }
+
+    .learning-links {
+      flex-direction: column;
+    }
+
+    .learning-links a {
+      width: 100%;
+
+      text-align: center;
+    }
+
+    .not-found {
+      padding: 80px 0;
+    }
+  }
+</style>
