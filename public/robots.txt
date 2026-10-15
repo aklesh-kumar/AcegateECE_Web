@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acegateece-web.aklesh08261.workers.dev/sitemap.xml
