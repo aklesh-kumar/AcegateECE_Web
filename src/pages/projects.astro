@@ -1,0 +1,375 @@
+
+---
+import Layout from "../layouts/Layout.astro";
+
+const categories = [
+  {
+    number: "01",
+    title: "Embedded Design Based Projects",
+    slug: "embedded-design",
+    description:
+      "Explore Embedded C, microcontrollers, firmware development, peripheral interfacing and hardware control.",
+    topics: ["Embedded C", "Microcontrollers", "UART / SPI / I2C", "Firmware"],
+    icon: "⚙️",
+    level: "Beginner to Advanced",
+  },
+  {
+    number: "02",
+    title: "Nanoscale Design Based Projects",
+    slug: "nanoscale-design",
+    description:
+      "Explore semiconductor devices, nanoscale transistor modelling and advanced technology nodes.",
+    topics: ["MOSFET", "FinFET", "GAAFET / NSFET", "TCAD Simulation"],
+    icon: "🔬",
+    level: "Intermediate to Advanced",
+  },
+  {
+    number: "03",
+    title: "Verilog Design Based Projects",
+    slug: "verilog-design",
+    description:
+      "Learn RTL design, digital logic, FPGA development, simulation and hardware verification.",
+    topics: ["RTL Design", "FSM", "ALU & FIFO", "FPGA"],
+    icon: "💻",
+    level: "Beginner to Advanced",
+  },
+  {
+    number: "04",
+    title: "C Programming Based Projects",
+    slug: "c-programming",
+    description:
+      "Build programming fundamentals through practical C language projects and engineering applications.",
+    topics: ["C Fundamentals", "Pointers", "Data Structures", "Algorithms"],
+    icon: "🖥️",
+    level: "Beginner to Advanced",
+  },
+  {
+    number: "05",
+    title: "C++ Based Projects",
+    slug: "cpp-programming",
+    description:
+      "Explore object-oriented programming, modern C++ concepts and practical software development.",
+    topics: ["OOP Concepts", "Classes & Objects", "STL", "Applications"],
+    icon: "⌨️",
+    level: "Beginner to Advanced",
+  },
+  {
+    number: "06",
+    title: "Mixed Engineering Projects",
+    slug: "mixed-projects",
+    description:
+      "Discover interdisciplinary projects combining programming, electronics, communication and hardware.",
+    topics: ["Python + C", "FPGA + Embedded", "SDR", "Hardware + Software"],
+    icon: "🚀",
+    level: "Intermediate to Advanced",
+  },
+];
+---
+
+<Layout>
+  <main class="project-hub">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">ACEgate ECE • PROJECT HUB</span>
+        <h1>Explore. Build. Innovate.</h1>
+        <p>
+          Welcome to the ACEgate ECE Project Hub. Discover practical
+          engineering projects, understand their working principles,
+          explore source code and develop real-world technical skills.
+        </p>
+        <a href="#categories" class="hero-button">Explore All Projects ↓</a>
+      </div>
+    </section>
+
+    <section class="introduction">
+      <span class="section-label">LEARN THROUGH IMPLEMENTATION</span>
+      <h2>Engineering Knowledge Meets Practical Experience</h2>
+      <p>
+        Explore six project domains covering programming, semiconductor
+        technology, digital design, embedded systems and interdisciplinary
+        engineering. Each category will have dedicated project listings
+        and learning resources.
+      </p>
+    </section>
+
+    <section id="categories" class="categories">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">PROJECT COLLECTION</span>
+          <h2>Explore Project Categories</h2>
+        </div>
+        <span class="category-count">06 Categories</span>
+      </div>
+
+      <div class="category-grid">
+        {categories.map((category) => (
+          <article class="category-card">
+            <div class="card-top">
+              <span class="category-number">{category.number}</span>
+              <span class="category-icon">{category.icon}</span>
+            </div>
+
+            <h3>{category.title}</h3>
+            <p class="description">{category.description}</p>
+
+            <div class="topics">
+              {category.topics.map((topic) => (
+                <span class="topic">{topic}</span>
+              ))}
+            </div>
+
+            <div class="card-bottom">
+              <span class="level">{category.level}</span>
+              <a href={`/projects/${category.slug}/`} class="explore-link">
+                Explore Category →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="project-method">
+      <span class="section-label">OUR LEARNING APPROACH</span>
+      <h2>What Will Each Project Include?</h2>
+
+      <div class="method-grid">
+        <div><span>01</span><h3>Project Overview</h3><p>Introduction and problem statement.</p></div>
+        <div><span>02</span><h3>Concept & Theory</h3><p>Fundamental concepts and working principles.</p></div>
+        <div><span>03</span><h3>Tools & Software</h3><p>Required development and simulation tools.</p></div>
+        <div><span>04</span><h3>Implementation</h3><p>Step-by-step development and source code.</p></div>
+        <div><span>05</span><h3>Results & Testing</h3><p>Simulation, outputs and verification.</p></div>
+        <div><span>06</span><h3>Documentation</h3><p>Reports, references and source-code links.</p></div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Start Your Engineering Journey</h2>
+      <p>
+        Learn the concepts, implement your ideas and build projects
+        that demonstrate your engineering skills.
+      </p>
+      <a href="/contact/" class="contact-button">Contact ACEgate ECE</a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .project-hub {
+    max-width: 1160px;
+    margin: auto;
+    padding: 25px 22px 70px;
+    color: #172033;
+  }
+
+  .hero {
+    padding: 85px 28px;
+    border-radius: 22px;
+    background: linear-gradient(130deg, #101b42, #1e4d91);
+    color: white;
+    text-align: center;
+  }
+
+  .hero-content { max-width: 800px; margin: auto; }
+
+  .eyebrow, .section-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2563eb;
+  }
+
+  .eyebrow { color: #bfdbfe; }
+
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 62px);
+    margin: 22px 0 15px;
+    line-height: 1.12;
+  }
+
+  .hero p {
+    color: #e0eaff;
+    line-height: 1.9;
+    font-size: 16px;
+  }
+
+  .hero-button, .contact-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 23px;
+    border-radius: 9px;
+    background: white;
+    color: #17366d;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .introduction {
+    max-width: 780px;
+    margin: 75px auto;
+    text-align: center;
+  }
+
+  .introduction h2, .section-heading h2,
+  .project-method h2, .closing h2 {
+    font-size: clamp(25px, 4vw, 34px);
+    margin: 13px 0;
+  }
+
+  .introduction p, .closing p {
+    color: #64748b;
+    line-height: 1.9;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+  }
+
+  .category-count {
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .category-card {
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 335px;
+    transition: transform .2s, box-shadow .2s;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px #17203312;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .category-number {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .category-icon { font-size: 32px; }
+
+  .category-card h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 19px 0 9px;
+  }
+
+  .description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 13px 0 20px;
+  }
+
+  .topic {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+  }
+
+  .card-bottom {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .level { color: #64748b; font-size: 12px; }
+
+  .explore-link {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .explore-link:hover { text-decoration: underline; }
+
+  .project-method {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .method-grid > div {
+    padding: 23px;
+    background: #f8fafc;
+    border-radius: 12px;
+  }
+
+  .method-grid span {
+    color: #2563eb;
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .method-grid h3 { font-size: 16px; margin: 10px 0; }
+  .method-grid p { font-size: 13px; color: #64748b; line-height: 1.6; }
+
+  .closing {
+    margin-top: 75px;
+    padding: 45px 25px;
+    border-radius: 18px;
+    background: #eff6ff;
+    text-align: center;
+  }
+
+  .contact-button { background: #1d4ed8; color: white; }
+
+  @media (max-width: 850px) {
+    .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .method-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 540px) {
+    .project-hub { padding: 16px 13px 45px; }
+    .hero { padding: 58px 19px; }
+    .category-grid, .method-grid { grid-template-columns: 1fr; }
+    .section-heading { align-items: flex-start; flex-direction: column; }
+    .introduction { margin: 50px auto; }
+  }
+</style>
